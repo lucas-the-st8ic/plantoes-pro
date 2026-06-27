@@ -31,16 +31,28 @@
   5. Engrenagem ⚙ → Config. do projeto → </> Web → Registrar app
      → copie os valores abaixo
 ══════════════════════════════════════════════════════ -->
-<script>
-const FIREBASE_CONFIG = {
-  apiKey:            "COLE_SEU_API_KEY",
-  authDomain:        "SEU_PROJETO.firebaseapp.com",
-  databaseURL:       "https://SEU_PROJETO-default-rtdb.firebaseio.com",
-  projectId:         "SEU_PROJETO",
-  storageBucket:     "SEU_PROJETO.appspot.com",
-  messagingSenderId: "SEU_SENDER_ID",
-  appId:             "SEU_APP_ID"
-};
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-analytics.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyDqk_GcDIDi_ROq-785-p6X5P8seLtwXAE",
+    authDomain: "plantoes-pro.firebaseapp.com",
+    projectId: "plantoes-pro",
+    storageBucket: "plantoes-pro.firebasestorage.app",
+    messagingSenderId: "387332370686",
+    appId: "1:387332370686:web:c8fd8320a7b883027475af",
+    measurementId: "G-7LKYPB2EBH"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 </script>
 
 <style>
@@ -424,30 +436,6 @@ html, body {
 </style>
 </head>
 <body>
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-analytics.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
-
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  const firebaseConfig = {
-    apiKey: "AIzaSyAUT54oUwaA7tyJPved5ARKwNSEE1PvBsA",
-    authDomain: "gerenciador-de-plantao-86d53.firebaseapp.com",
-    databaseURL: "https://gerenciador-de-plantao-86d53-default-rtdb.asia-southeast1.firebasedatabase.app",
-    projectId: "gerenciador-de-plantao-86d53",
-    storageBucket: "gerenciador-de-plantao-86d53.firebasestorage.app",
-    messagingSenderId: "128162673032",
-    appId: "1:128162673032:web:8c136af2576c5b72454a3d",
-    measurementId: "G-336VQKQDJR"
-  };
-
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
-</script>
 <!-- LOADING -->
 <div id="loading-screen">
   <div class="spinner"></div>
